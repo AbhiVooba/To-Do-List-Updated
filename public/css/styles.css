@@ -1,12 +1,12 @@
 html {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(147,87,103,1) 34%, rgba(40,214,121,1) 82%, rgba(0,212,255,1) 100%);
-  min-height: 600px;
+  min-height: 400px;
   font-family: 'Roboto';
 }
 
 h1 {
-  color: #fff;
+  color: #0C134F;
   padding: 10px;
   text-align: center;
 }
@@ -20,7 +20,7 @@ h1 {
 }
 
 #heading {
-  background-color: #537188;
+  background-color: #A4D0A4;
   text-align: center;
 }
 
@@ -50,7 +50,7 @@ p {
   font-size: 20px;
   font-weight: 200;
   color: #00204a;
-  text-align:center;
+  text-align:left;
 }
 
 form.item {
@@ -95,6 +95,6 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 230px;
-  color:#0C134F;
+  margin-top: 50px;
+  color:#5F264A;
 }
