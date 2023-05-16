@@ -32,21 +32,34 @@ run();
 
 const item1 = new Item(
   {
-    name: "Welcome to to do List."
+    name: "A useful webapp to keep up with your tasks in daily life."
   }
 );
 
 const item2 = new Item(
   {
-    name: "Hit the + button to add a new item."
+    name: "Create your own list by naming it after the URL with / before it."
   }
 );
 
 const item3 = new Item(
   {
+    name: "Example: www.to-do-list.com/shopping"
+  }
+);
+const item4 = new Item(
+  {
+    name: "Hit the + button to add a new item."
+  }
+);
+
+const item5 = new Item(
+  {
     name: "<-- Hit this to delete an item."
   }
 );
+
+
 
 const ListSchema =
 {
@@ -63,12 +76,12 @@ app.get("/", function(req, res)
     const items = await Item.find({});
     if(items.length === 0)
     {
-      Item.insertMany([item1, item2, item3]);
+      Item.insertMany([item1, item2, item3, item4, item5]);
       res.redirect("/");
     }
     else
     {
-      res.render("list", {listTitle: "Today", newListArray: items});
+      res.render("list", {listTitle: "To Do List", newListArray: items});
     }
   }
   foundItems();
@@ -85,7 +98,7 @@ app.get("/:routes", function(req, res)
        const list = new List(
        {
         name: routes,
-        listItems: [item1, item2, item3]
+        listItems: [item1, item2, item3, item4, item5]
        });
       list.save();
       res.redirect("/" +  routes);
@@ -108,7 +121,7 @@ app.post("/", function(req, res)
   const itemName = new Item({
     name: newItem
   });
-  if(listName === "Today")
+  if(listName === "To Do List")
   {
     itemName.save();
     res.redirect("/");
@@ -130,7 +143,7 @@ app.post("/delete", function(req, res)
 {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
-  if(listName === "Today")
+  if(listName === "To Do List")
   {
     async function removeId()
     {
@@ -159,3 +172,4 @@ app.listen(3000, function()
 {
   console.log("Server is running at port 3000");
 });
+
