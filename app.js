@@ -19,7 +19,7 @@ async function run()
 {
   try
   {
-   await mongoose.connect("mongodb+srv://voobaabhinav:NfIxiDBNsZtTKSvj@cluster0.j5mfwwh.mongodb.net/toDoListDB?retryWrites=true&w=majority");
+   await mongoose.connect("mongodb+srv://voobaabhinav:A4XtjxbehWaShxdP@cluster0.jyssg07.mongodb.net/toDoListDB?retryWrites=true&w=majority");
   }
   catch(err)
   {
@@ -44,7 +44,7 @@ const item2 = new Item(
 
 const item3 = new Item(
   {
-    name: "Example: www.to-do-list.com/shopping"
+    name: "Example: www.to-do-list.com/'shopping'"
   }
 );
 const item4 = new Item(
@@ -172,4 +172,3 @@ app.listen(3000, function()
 {
   console.log("Server is running at port 3000");
 });
-
