@@ -19,7 +19,7 @@ async function run()
 {
   try
   {
-   await mongoose.connect("mongodb+srv://voobaabhinav:oVgcSbEWDkxW4bVH@cluster0.jyssg07.mongodb.net/?retryWrites=true&w=majority");
+   await mongoose.connect("mongodb+srv://voobaabhinav:NfIxiDBNsZtTKSvj@cluster0.j5mfwwh.mongodb.net/toDoListDB?retryWrites=true&w=majority");
   }
   catch(err)
   {
